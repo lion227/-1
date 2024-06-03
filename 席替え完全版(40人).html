@@ -1,0 +1,35 @@
+<html>
+<body>
+<table border="1">
+<script>
+
+var r = [];
+var min =1,max=40,tmp=0,n=1;
+r[0]=Math.floor(Math.random()*(max-min+1))+min;
+
+for(var i=1;n<40;i++){
+var f=0;
+tmp=Math.floor(Math.random()*(max-min+1))+min;
+for(var m=0;m<r.length;m++){if(r[m]==tmp){f=f+1;}}
+if(f==0){r[n]=tmp;n=n+1;}
+}
+
+document.write('<tr>');
+for(var con=0;con<=40;con++){
+document.write('<td>'+"　"+'</td>');
+for(var i=0;i<7;i++){
+
+if(con<4){for(var k=0;k<4;k++){
+document.write('<td>'+r[con]+'</td>');con=con+1}
+document.write('<td>'+"　"+'</td>');
+document.write('<tr>');}
+
+else if(con>3){
+for(var l=0;l<6;l++){
+document.write('<td>'+r[con]+'</td>');con=con+1}
+document.write('</tr>');}
+document.write("<br>");}}
+
+</script>
+</body>
+</html>

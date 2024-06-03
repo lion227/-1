@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta charset="UTF-8" />
+</head>
+ <body>
+ <h1>今回のテストについて</h1>
+ </body>
+
+<script>
+
+var a=Number(prompt("テストを受けた人数を教えてください"));
+var b=0
+var c=[];
+
+for(var d=1;d<=a;d++){
+c[d]=Number(prompt(d+"人目の点数を教えてください"));
+var b=b+c[d];}
+b=b/a;
+
+var e=[];
+var f=0;
+var h=[];
+for(var g=1;g<=a;g++){
+e[g]=c[g]-b;
+h[g]=e[g]**2;
+var f=f+h[g];}
+f=f/a;
+
+var l=(Math.round(f*10))/10;
+
+document.write("平均点："+b+"<br>");
+document.write("分散："+l+"<br>");
+f=Math.sqrt(f);
+f=(Math.round(f*10))/10;
+document.write("標準偏差："+f+"<br>");
+
+var j=[];
+var k=[];
+for(var i=1;i<=a;i++){
+j[i]=c[i]-b;
+k[i]=j[i]/f*10+50;
+k[i]=(Math.round(k[i]*10))/10;
+
+document.write(i+"人目　　点数："+c[i]+"　偏差値："+k[i]+"<br>");}
+
+</script>
+</html>

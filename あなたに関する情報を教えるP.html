@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta charest="UTF-8" />
+</head>
+ <body>
+<h1>あなたに関する情報</h1>
+ </body>
+
+<script>
+var a=alert("今からあなたの誕生日を当てます")
+
+var ex=1
+while(ex !=0){
+
+var az=[[1,3,5,7,9,11],[2,3,6,7,10,11],[4,5,6,7,12],[8,9,10,11,12]];
+
+var ab=confirm(az[0]+"の中に誕生月はありますか？");
+if(ab==true){ac=1;}
+else {ac=0};
+
+var ad=confirm(az[1]+"の中に誕生月はありますか？");
+if(ad==true){ae=2;}
+else{ae=0};
+
+var af=confirm(az[2]+"の中に誕生月はありますか？");
+if(af==true){ag=4;}
+else{ag=0};
+
+var ah=confirm(az[3]+"の中に誕生月はありますか？");
+if(ah==true){ai=8;}
+else{ai=0};
+
+var b=(ac+ae+ag+ai);
+
+if(b<=12){ex=0}
+else{alert("もう一度お願いします。")}
+};
+
+var ay=[[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31],
+[2,3,6,7,10,11,14,15,18,19,22,23,26,27,30,31],[4,5,6,7,12,13,14,15,20,21,22,23,28,29,30,31],
+[8,9,10,11,12,13,14,15,24,25,26,27,28,29,30,31],[16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]];
+
+var bc=confirm(ay[0]+"の中に誕生日はありますか？");
+if(bc==true){bd=1;}
+else {bd=0};
+
+var be=confirm(ay[1]+"の中に誕生日はありますか？");
+if(be==true){bf=2;}
+else{bf=0};
+
+var bg=confirm(ay[2]+"の中に誕生日はありますか？");
+if(bg==true){bh=4;}
+else{bh=0};
+
+var bi=confirm(ay[3]+"の中に誕生日はありますか？");
+if(bi==true){bj=8;}
+else{bj=0};
+
+var bk=confirm(ay[4]+"の中に誕生日はありますか？");
+if(bk==true){bl=16;}
+else{bl=0};
+
+var c=(bd+bf+bh+bj+bl);
+
+var d=alert("あなたの誕生日は"+b+"月"+c+"日ですね。次にその日の曜日を当てます");
+
+if(b==1){e=1}
+else if(b==2){e=4}
+else if(b==3){e=3}
+else if(b==4){e=6}
+else if(b==5){e=1}
+else if(b==6){e=4}
+else if(b==7){e=6}
+else if(b==8){e=2}
+else if(b==9){e=5}
+else if(b==10){e=0}
+else if(b==11){e=3}
+else if(b==12){e=5};
+
+var f=Number(prompt("生まれた年の上2桁を半角で入力してください(例：2005＝20)"));
+var g=Number(prompt("次に下2桁を半角で入力してください（例：2005＝05）"));
+
+if((b<=2)&&(g==00)){h=99}
+else if(b<=2){h=g-1}
+else if(b>2){h=g};
+
+var i=(Math.floor(h/4));
+
+if(f==19){j=1}
+else if(f==20){j=0}
+else if(f==18){j=3}
+else if(f==17){j=5};
+
+var k=(h+i+e+c+j);
+
+var l=((k%7));
+
+if(l==1){m="日曜日"}
+else if(l==2){m="月曜日"}
+else if(l==3){m="火曜日"}
+else if(l==4){m="水曜日"}
+else if(l==5){m="木曜日"}
+else if(l==6){m="金曜日"}
+else if(l==0){m="土曜日"};
+
+var n=(f*100+g);
+var o=(b*100+c);
+
+document.write("あなたの生まれた日は"+n+"年　"+b+"月"+c+"日　"+m+"ですね");
+document.write("<br>");
+
+var x=((n%10))
+
+if(x==0){y="庚（かのえ）";}
+else if(x==1){y="辛（かのと）";}
+else if(x==2){y="壬（みずのえ）";}
+else if(x==3){y="癸（みずのと）";}
+else if(x==4){y="甲（きのえ）";}
+else if(x==5){y="乙（きのと）";}
+else if(x==6){y="丙（ひのえ）";}
+else if(x==7){y="丁（ひのと）";}
+else if(x==8){y="戊（つちのえ）";}
+else if(x==9){y="己（つちのと）";}
+
+var u=((n%12))
+
+if(u==0){document.write("そして"+y+"申年で");}
+else if(u==1){document.write("そして"+y+"酉年で");}
+else if(u==2){document.write("そして"+y+"戌年で");}
+else if(u==3){document.write("そして"+y+"亥年で");}
+else if(u==4){document.write("そして"+y+"子年で");}
+else if(u==5){document.write("そして"+y+"丑年で");}
+else if(u==6){document.write("そして"+y+"寅年で");}
+else if(u==7){document.write("そして"+y+"卯年で");}
+else if(u==8){document.write("そして"+y+"辰年で");}
+else if(u==9){document.write("そして"+y+"巳年で");}
+else if(u==10){document.write("そして"+y+"午年で");}
+else if(u==11){document.write("そして"+y+"未年で");}
+
+if(o<=119){document.write("、やぎ座です");}
+else if(o<=218){document.write("、みずがめ座です");}
+else if(o<=320){document.write("、うお座です");}
+else if(o<=419){document.write("、おひつじ座です");}
+else if(o<=520){document.write("、おうし座です");}
+else if(o<=621){document.write("、ふたご座です");}
+else if(o<=722){document.write("、かに座です");}
+else if(o<=822){document.write("、しし座です");}
+else if(o<=922){document.write("、おとめ座です");}
+else if(o<=1023){document.write("、てんびん座です");}
+else if(o<=1122){document.write("、さそり座です");}
+else if(o<=1221){document.write("、いて座です");}
+else if(o<=1231){document.write("、やぎ座です");}
+
+document.write("<br>");
+
+if(b==1){e=1}
+else if(b==2){e=4}
+else if(b==3){e=3}
+else if(b==4){e=6}
+else if(b==5){e=1}
+else if(b==6){e=4}
+else if(b==7){e=6}
+else if(b==8){e=2}
+else if(b==9){e=5}
+else if(b==10){e=0}
+else if(b==11){e=3}
+else if(b==12){e=5};
+
+var xa=(g+60);
+
+if(xa>100){xb=xa-100}
+else{xb=xa};
+
+if((b<=2)&&(xb==00)){xc=99}
+else if(b<=2){xc=xb-1}
+else if(b>2){xc=xb};
+
+var xd=(Math.floor(xc/4));
+
+if(xa>100){xe=f+1}
+else{xe=f};
+
+if(xe==19){xf=1}
+else if(xe==20){xf=0}
+else if(xe==18){xf=3}
+else if(xe==17){xf=5};
+
+var xg=(xc+xd+e+c+xf);
+
+var xh=((xg%7));
+
+if(xh==1){xi="日曜日"}
+else if(xh==2){xi="月曜日"}
+else if(xh==3){xi="火曜日"}
+else if(xh==4){xi="水曜日"}
+else if(xh==5){xi="木曜日"}
+else if(xh==6){xi="金曜日"}
+else if(xh==0){xi="土曜日"};
+
+var xj=(xe*100+xb);
+
+document.write("あなたの還暦は"+xj+"年　"+b+"月"+c+"日　"+xi+"です");
+document.write("<br>");
+
+if(b==1){document.write("ちなみに誕生石はガーネットです");}
+else if(b==2){document.write("ちなみに誕生石はアメシストとクリソベリルキャッツアイです");}
+else if(b==3){document.write("ちなみに誕生石はアクアマリンと珊瑚、ブラッドストーン、アイオライトです");}
+else if(b==4){document.write("ちなみに誕生石はダイヤモンドとモルガナイトです");}
+else if(b==5){document.write("ちなみに誕生石はエメラルドとヒスイです");}
+else if(b==6){document.write("ちなみに誕生石はパールとムーンストーン、アレキサンドライトです");}
+else if(b==7){document.write("ちなみに誕生石はルビーとスフェーンです");}
+else if(b==8){document.write("ちなみに誕生石はペリドットとサードオニックス、スピネルです");}
+else if(b==9){document.write("ちなみに誕生石はサファイヤとクンツァイトです");}
+else if(b==10){document.write("ちなみに誕生石はオパールとトルマリンです");}
+else if(b==11){document.write("ちなみに誕生石はトパーズとシトリンです");}
+else if(b==12){document.write("ちなみに誕生石はトルコ石とラピスラズリ、タンザナイト、ジルコンです");}
+
+document.write("<br>");
+document.write("そんなあなたの今日の運勢は…");
+document.write("<br>");
+
+var p=Math.floor(Math.random()*100);
+q="★★★★★";
+if (p>9)q="★★★★☆";
+if(p>29)q="★★★☆☆";
+if(p>69)q="★★☆☆☆";
+if(p>89)q="★☆☆☆☆";
+document.write("金運："+q);
+document.write("<br>");
+
+var r=Math.floor(Math.random()*100);
+s="💓💓💓💓💓";
+if(r>9)s="💓💓💓💓♡";
+if(r>29)s="💓💓💓♡♡";
+if(r>69)s="💓💓♡♡♡";
+if(r>89)s="💓♡♡♡♡";
+document.write("恋愛運："+s);
+document.write("<br>");
+
+var t=Math.floor(Math.random()*100);
+u="✏✏✏✏✏";
+if(t>9)u="✏✏✏✏";
+if(t>29)u="✏✏✏";
+if(t>69)u="✏✏";
+if(t>89)u="✏";
+document.write("仕事・勉強運"+u);
+
+var v=Math.floor(Math.random()*100);
+w="赤";
+if(v>10)w="青";
+if(v>20)w="黄";
+if(v>30)w="緑";
+if(v>40)w="黒";
+if(v>50)w="白";
+if(v>60)w="オレンジ";
+if(v>70)w="ピンク";
+if(v>80)w="紫";
+if(v>90)w="灰色";
+
+document.write("<br>");
+
+document.write("ラッキーカラーは"+w+"！");
+
+</script>
+</html>
